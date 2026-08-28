@@ -1,0 +1,11 @@
+.git
+.gitignore
+captures/
+sujet-projet/
+README.md
+Dockerfile*
+docker-compose*.yml
+__pycache__/
+*.pyc
+.venv/
+venv/

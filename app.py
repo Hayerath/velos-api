@@ -16,6 +16,7 @@ Deux comportements a comprendre avant de commencer :
 2. L'application ecoute sur toutes les interfaces (0.0.0.0).
    Sans cela, la publication de port d'un conteneur ne servirait a rien.
 """
+#Bien 
 
 import os
 
@@ -31,6 +32,7 @@ STATIONS_SECOURS = [
     {"nom": "Universite", "quartier": "Sud", "velos_disponibles": 1, "capacite": 25},
 ]
 
+# Bon
 
 def lire_stations():
     """Retourne (stations, source). La source vaut 'postgres' ou 'memoire'."""
