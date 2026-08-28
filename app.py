@@ -80,13 +80,12 @@ def disponibilite():
     return jsonify({"source": source, "taux_occupation": taux})
 
 
-# ---------------------------------------------------------------------------
-# A TOI DE JOUER (jalon 3 de l'enonce)
-#
-# Ajoute ici une route /alertes (seuil d'alerte fixe a 2 velos disponibles).
-# Respecte la forme des reponses ci-dessus : le champ "source" doit y figurer.
-# Puis ecris le test correspondant (jalon 4).
-# ---------------------------------------------------------------------------
+@app.get("/alertes")
+def alertes():
+    donnees, source = lire_stations()
+    seuil = 2
+    stations_en_alerte = [s for s in donnees if s["velos_disponibles"] <= seuil]
+    return jsonify({"source": source, "seuil": seuil, "stations": stations_en_alerte})
 
 
 if __name__ == "__main__":
