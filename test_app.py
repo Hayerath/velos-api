@@ -11,5 +11,5 @@ def test_alertes_seuil():
     reponse = client.get("/alertes")
     donnees = reponse.get_json()
     assert reponse.status_code == 200
-    assert donnees["source"] == "XXX"
+    assert donnees["source"] == "memoire"
     assert all(s["velos_disponibles"] <= 2 for s in donnees["stations"])
