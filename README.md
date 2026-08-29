@@ -17,3 +17,4 @@ L'application lit sa configuration via des variables d'environnement :
 
 - `DATABASE_URL` : si définie, l'application lit les données depuis PostgreSQL. Sinon, elle utilise un jeu de données en mémoire.
 - `PORT` : port d'écoute (par défaut `8000`).
+< test declenchement pipeline -->
